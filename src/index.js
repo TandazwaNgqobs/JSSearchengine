@@ -5,11 +5,13 @@ function search(event) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
+  let IconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = searchInputElement.value;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  IconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon" />`;
   getWeatherInfo(searchInputElement.value);
 }
 function getWeatherInfo(city) {
