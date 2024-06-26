@@ -1,6 +1,6 @@
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
-  let currentTemperature = response.data.current;
+  let currentTemperature = response.data.temperature.current;
   let cityElement = document.querySelector("#current-city");
   let descriptionElement = document.querySelector("#description");
   let currentDateELement = document.querySelector("#current-date");
